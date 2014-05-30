@@ -1,0 +1,17 @@
+{
+  "name": "Hackaid Badges App",
+  "description": "An app for volunteers in crisis response. Share your skills, display your badges, get alerts about current volunteer needs.",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/images/icon-128.png"
+  },
+  "developer": {
+    "name": "Lisha Sterling",
+    "url": "http://gwob.org"
+  },
+  "permissions": {
+    "desktop-notification": {
+      "description": "Needed for creating system notifications."
+    }
+  }
+}
