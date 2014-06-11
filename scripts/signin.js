@@ -1,4 +1,4 @@
-var email = 'c1cochran@yahoo.com'; 
+var email = document.getElementsByClassName('email'); 
 var url = 'http://backpack.openbadges.org/displayer/convert/' + email; 
 var oReq = new XMLHttpRequest();
 
