@@ -1,9 +1,12 @@
 
 function getID() {
-var email = document.getElementsByClassName('email').value; 
-var url = 'http://beta.openbadges.org/displayer/convert/email' + email; 
+var email = document.getElementById('email').value; 
+var url = 'http://beta.openbadges.org/displayer/convert/email'; 
 var oReq = new XMLHttpRequest();
 
+var formData = new formData();
+var blob = new Blob([email], { type: "text/xml"});
+formData.append("email", blob);
 
 oReq.onreadystatechange = function() {
     alert(oReq.responseText);
@@ -13,6 +16,6 @@ oReq.onreadystatechange = function() {
 
 oReq.responseType = "json";
 oReq.open("POST", url, true);
-oReq.send();
+oReq.send(formData);
 
 }
