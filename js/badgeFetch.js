@@ -1,4 +1,4 @@
-var email = document.getElementsByClassName('email'); 
+var email = document.getElementsByClassName('email').value; 
 var url = 'http://backpack.openbadges.org/displayer/convert/' + email; 
 var oReq = new XMLHttpRequest();
 
