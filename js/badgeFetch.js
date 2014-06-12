@@ -10,8 +10,8 @@ oReq.onreadystatechange = function() {
         
     }
 	// Need to implement formData! Will not work.
-oReq.responseType = "json";
 
+oReq.responseType = "json";
 oReq.open("POST", url, true);
 oReq.send();
 
