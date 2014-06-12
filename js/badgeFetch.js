@@ -5,12 +5,22 @@ var url = 'http://backpack.openbadges.org/displayer/convert/' + email;
 var oReq = new XMLHttpRequest();
 
 
-oReq.onload = function(e) {
-  var arraybuffer = oReq.response; // not responseText
-  /* ... */
-}
+oReq.onreadystatechange = function() {
+    alert(oReq.responseText);
+        
+    }
+	
+/*
+//oReq.onload = function(e) {
+// var arraybuffer = oReq.response; // not responseText
+// 
+} 
+
 oReq.responseType = "arraybuffer";
+*/
 oReq.open("GET", url, true);
 oReq.send();
 
+
+alert(oReq.responseText);
 }
