@@ -30,7 +30,7 @@ function getID() {
 
 	$.ajax({
 		// the URL for the request
-		url: "http://backpack.openbadges.org/displayer/convert/email",
+		url: "/backpack.openbadges.org/displayer/convert/email",
 	 
 		// the data to send (will be converted to a query string)
 		data: {
@@ -38,10 +38,12 @@ function getID() {
 		},
 	 
 		// whether this is a POST or GET request
-		type: "GET",
+		type: "POST",
+		
+		contentType: "application/json",
 		
 		// the type of data we expect back
-		dataType : "text",
+		dataType : "application/json",
 	 
 		// code to run if the request succeeds;
 		// the response is passed to the function
