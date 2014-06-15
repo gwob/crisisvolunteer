@@ -27,7 +27,7 @@ function getID() {
 //    console.log( response ); // server response
 //});
 
-
+/*
 	$.ajax({
 		// the URL for the request
 		url: "/backpack.openbadges.org/displayer/convert/email",
@@ -67,4 +67,15 @@ function getID() {
 			alert( "The request is complete!" );
 		}
 	});
+*/
+
+$.ajax({ 
+	url: "scripts/getID.php" ,
+
+	xhrFields: {
+      withCredentials: true
+   }
+   
+});
+
 }
