@@ -21,14 +21,14 @@ function getID() {
 	oReq.contentType = "application/json";
 	oReq.open("POST", url);
 	oReq.send(formData);
+
+
+});
 */
-
-//});
-
 
 	$.ajax({
 		// the URL for the request
-		url: "/backpack.openbadges.org/displayer/convert/email",
+		url: "http://backpack.openbadges.org/displayer/convert/email",
 	 
 		// the data to send (will be converted to a query string)
 		data: {
@@ -37,8 +37,6 @@ function getID() {
 	 
 		// whether this is a POST or GET request
 		type: "POST",
-		
-		contentType: "application/json",
 		
 		// the type of data we expect back
 		dataType : "application/json",
