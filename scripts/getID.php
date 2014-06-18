@@ -1,3 +1,4 @@
+/*
 $curl = curl_init();
 curl_setopt_array($curl, array(
     CURLOPT_URL => 'http://backpack.openbadges.org/displayer/convert/email',
@@ -11,9 +12,11 @@ $resp = curl_exec($curl);
 
 curl_close($curl);
 
+*/
+
 //New section, untested
 
-$data = array("name" => "Hagrid", "age" => "36");                                                                    
+$data = array("email" => "c1cochran@yahoo.com");                                                                    
 $data_string = json_encode($data);                                                                                   
  
 $ch = curl_init();                                                                      
