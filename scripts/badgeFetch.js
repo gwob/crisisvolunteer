@@ -1,6 +1,6 @@
 
 function getID() {
-	/*var email = document.getElementById('email').value; 
+/*	var email = document.getElementById('email').value; 
 	var url = 'http://backpack.openbadges.org/displayer/convert/email'; 
 	var oReq = new XMLHttpRequest();
 
@@ -23,8 +23,6 @@ function getID() {
 	oReq.send(formData);
 */
 
-//$.get( "http://backpack.openbadges.org/displayer/convert/email", function( response ) {
-//    console.log( response ); // server response
 //});
 
 
