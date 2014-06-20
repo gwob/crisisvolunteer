@@ -15,7 +15,7 @@ curl_close($curl);
 */
 
 //New section, untested
-
+<?php
 $data = array("email" => "c1cochran@yahoo.com");                                                                    
 $data_string = json_encode($data);                                                                                   
  
@@ -29,3 +29,4 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 );                                                                                                                   
  
 $result = curl_exec($ch);
+?>
