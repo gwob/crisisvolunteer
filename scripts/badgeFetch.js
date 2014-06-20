@@ -66,9 +66,7 @@ function getID() {
 */
 
 $.ajax({ 
-	url: "scripts/getID.php" ,
-
-	//type: "GET",
+	url: "http://localhost/scripts/getID.php" ,
 	
 	//xhrFields: {
       //withCredentials: true
