@@ -15,6 +15,7 @@ curl_close($curl);
 */
 
 //New section, untested
+/*
 <?php
 $data = array("email" => "c1cochran@yahoo.com");                                                                    
 $data_string = json_encode($data);                                                                                   
@@ -25,6 +26,23 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
     'Content-Type: application/json',                                                                                
+    'Content-Length: ' . strlen($data_string))                                                                       
+);                                                                                                                   
+ 
+$result = curl_exec($ch);
+?>
+*/
+
+<?php
+$data = "email=k1kokhran@gmail.com";                                                                    
+$data_string = $data;                                                                                   
+ 
+$ch = curl_init();                                                                      
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                  
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
+    'Content-Type: text',                                                                                
     'Content-Length: ' . strlen($data_string))                                                                       
 );                                                                                                                   
  
