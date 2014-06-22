@@ -25,7 +25,7 @@ function getID() {
 
 });
 */
-/*
+
 	$.ajax({
 		// the URL for the request
 		url: "http://backpack.openbadges.org/displayer/convert/email",
@@ -39,7 +39,7 @@ function getID() {
 		type: "POST",
 		
 		// the type of data we expect back
-		dataType : "application/json",
+		dataType : "jsonp",
 	 
 		// code to run if the request succeeds;
 		// the response is passed to the function
@@ -63,8 +63,8 @@ function getID() {
 			alert( "The request is complete!" );
 		}
 	});
-*/
 
+/*
 $.ajax({ 
 	url: "http://localhost/scripts/test.php" ,
 	
@@ -72,5 +72,5 @@ $.ajax({
       //withCredentials: true
    
    });
-
+*/
 }
