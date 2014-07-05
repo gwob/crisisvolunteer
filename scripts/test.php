@@ -4,7 +4,7 @@ function get_badges($mail = 'c1cochran@yahoo.com'){
 	
   // GET User ID from user mail
 	$id_url = 'http://backpack.openbadges.org/displayer/convert/email';
-
+    //this
 	$badges_info = array();
 	if (isset($mail)) {
 		$email = 'email='.$mail;
