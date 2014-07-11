@@ -1,19 +1,21 @@
 $(function(){
-   $("#submitBtn").click(function(){
-      var run = $.ajax({
-        type: "POST",
-        url: "scripts/test.php",
-        data: { mail: $('#mail').val()
+   $("#submitBtn").click(function(e){
+       e.preventDefault();
+       var mail = $('#mail').val();
+      
+      $.ajax({
+        type: 'POST',
+        contentType: 'application/x-www-form-urlencoded',
+        dataType: 'JSON',
+        url: 'scripts/test.php',
+        data: { 
+            mail: mail 
+        },
+        success: function(data){
+        var jdata = jQuery.parseJSON(data);
+            alert("success! X: " + data);
         }
-        });
-       
-       run.done(function(msg) {
-           
-       });
-       run.fail(function(jqXHR, textStatus) {
-           alert( "Request failed: " + textStatus );
-       });
+        
+      });
    });
 });
-
-console.log(msg);
