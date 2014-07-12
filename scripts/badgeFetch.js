@@ -13,9 +13,9 @@ $(function(){
         },
         success: function(data){
         var jdata = jQuery.parseJSON(data);
-            alert("success! X: " + data);
+            
         }
         
-      });
+      }); 
    });
 });
