@@ -22,11 +22,11 @@ $(function(){
    });
 });
 
-/*
+
 $(function(){
     $("#refreshBtn").click(function(e){
         e.preventDefault(); 
-        var badgeInfo = 
+        var badgeInfo = JSON.parse(localStorage.getItem('userInfo'));
         
         $.ajax({
             type: 'POST',
@@ -34,7 +34,7 @@ $(function(){
             dataType: 'JSON',
             url: 'scripts/badgesScript.php',
             data: { 
-                group: JSON.parse(localStorage.getItem('userInfo'));
+                groups: badgeInfo
             },
             success: function(data){
                 var jdata = jQuery.parseJSON(data);
@@ -42,7 +42,5 @@ $(function(){
 
             }
         }); 
-    
     });
 });
-*/
