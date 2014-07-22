@@ -14,8 +14,10 @@ $(function(){
         },
         //Saves JSON user data in localStorage
         success: function(data){
-            var jdata = jQuery.parseJSON(data);
-            localStorage.setItem('userInfo', JSON.stringify(data));
+            //var jdata = jQuery.parseJSON(data);
+            localStorage.setItem('userId', data['user_id']);
+            localStorage.setItem('groupOne', data[0]);
+            console.log(localStorage.getItem('userId'));
             
         }
       }); 

@@ -29,24 +29,27 @@
 		curl_close($curl);
 	
 		$badge_groups = json_decode($returned_groups)->groups;
-	    $group_id = json_decode($returned_groups)->groupId;
+	    //$group_id = $badge_groups['groupId'];
 		
         foreach ($badge_groups as $group) {
 			$badges_info[] = $group->groupId;
 		}
-        
+        //$group_id = $badges_info['groupId'];
         //Retrieves one group or enough data to extract an image URL
         
-        $badges_url = 'http://backpack.openbadges.org/displayer/'.$user_id.'/group'.$group_id;
-		$curl = curl_init($badges_url);
-		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-		$returned_group = curl_exec($curl);
-		curl_close($curl);
-            
+        //$badges_url = 'http://backpack.openbadges.org/displayer/'.$user_id.'/group/'.$group_id;
+		//$curl = curl_init($badges_url);
+        //curl_setopt($curl, CURLOPT_HTTPGET, true);
+		//curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+		//$returned_group = curl_exec($curl);
+		//curl_close($curl);
+        $json_badges = json_encode($badges_info);
 
     }
 
-echo $returned_groups;
-echo $returned_group;
+//echo $returned_groups;
+//echo $returned_group;
+//echo $badges_info;
+echo $json_badges;
 
 ?>
