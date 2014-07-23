@@ -1,3 +1,22 @@
-h1 {
+h1 
+{
     color: blue;
+}
+
+#refreshBtn
+{
+    display: inline;
+    height: 20px; 
+    width: 35px;
+}
+
+#badgesTitle
+{
+    display: inline;
+}
+
+#badgeContainer
+{
+    max-width: inherit;
+    max-height: inherit;
 }

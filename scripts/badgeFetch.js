@@ -24,19 +24,19 @@ $(function(){
    });
 });
 
-
+/*
 $(function(){
-    $("#refreshBtn").click(function(e){
-        e.preventDefault(); 
-        var badgeInfo = JSON.parse(localStorage.getItem('userInfo'));
+    $("#refreshBtn").click(function(j){
+        j.preventDefault(); 
+        var groupInfo = localStorage.getItem('groupOne');
         
         $.ajax({
             type: 'POST',
             contentType: 'application/x-www-form-urlencoded',
-            dataType: 'JSON',
+            dataType: 'text',
             url: 'scripts/badgesScript.php',
             data: { 
-                groups: badgeInfo
+                group: groupInfo
             },
             success: function(data){
                 var jdata = jQuery.parseJSON(data);
@@ -46,3 +46,4 @@ $(function(){
         }); 
     });
 });
+*/
