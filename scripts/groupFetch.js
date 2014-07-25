@@ -2,6 +2,7 @@ $(function(){
     $("#refreshBtn").click(function(j){
         j.preventDefault(); 
         var groupInfo = localStorage.getItem('groupOne');
+        var userId = localStorage.getItem('userId');
         
         $.ajax({
             type: 'POST',
@@ -9,6 +10,7 @@ $(function(){
             dataType: 'text',
             url: 'scripts/badgesScript.php',
             data: { 
+                user: userId,
                 group: groupInfo
             },
             success: function(data){
@@ -17,7 +19,7 @@ $(function(){
                 //$( "#badgeContainer" ).append( "<div ></div>" );
                 var image = jdata.badges[0].assertion.badge.image;
                 console.log(image);
-                $( "#badgeContainer" ).html( "<img src='" + image + "'>" + "</img>");
+                $("#badgeContainer").html( "<img src='" + image + "'>" + "</img>");
                 
             }
         }); 

@@ -12,6 +12,7 @@ $(function(){
         data: { 
             mail: mail 
         },
+        
         //Saves JSON user data in localStorage
         success: function(data){
             //var jdata = jQuery.parseJSON(data);
@@ -24,11 +25,12 @@ $(function(){
    });
 });
 
-/*
+//Retrieves the first badge in the first group of badges
 $(function(){
     $("#refreshBtn").click(function(j){
         j.preventDefault(); 
         var groupInfo = localStorage.getItem('groupOne');
+        var userId = localStorage.getItem('userId');
         
         $.ajax({
             type: 'POST',
@@ -36,14 +38,17 @@ $(function(){
             dataType: 'text',
             url: 'scripts/badgesScript.php',
             data: { 
+                user: userId,
                 group: groupInfo
             },
             success: function(data){
                 var jdata = jQuery.parseJSON(data);
-                localStorage.setItem('badgeInfo', JSON.stringify(data));
-
+                //localStorage.setItem('badgeInfo', JSON.stringify(data));
+                var image = jdata.badges[3].assertion.badge.image;
+                console.log(image);
+                $("#badgeContainer").html( "<img src='" + image + "'>" + "</img>");
+                
             }
         }); 
     });
 });
-*/
