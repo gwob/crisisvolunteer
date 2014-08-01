@@ -8,14 +8,15 @@
     <!-- I haven't figured out how to get the backpack id stuff in here yet -->
         <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"> </script> -->
         <script src="scripts/jquery-1.8.2.min.js" type="text/javascript"> </script>
-
         <script src="scripts/badgeFetch.js" type="text/javascript"> </script>
         <link href="style/cv.css" type="text/css" rel="stylesheet"></link>
 
     </head>
     <body role="application">
         <div id="container">
-            <h1>Profile</h1>
+            <div id="banner" style="padding: 0px 0px 0px 0px;">
+                <h1 style="margin: 0px 0px; text-align: center; display: block;">Profile</h1>
+            </div>
             <form>
                 Username: <input type="text" id="IDtest"><br>
                 First Name: <input type="text"><br>
@@ -25,11 +26,12 @@
 
                 Skills: <input type="textbox"></br>
                 <input type="checkbox" name="location" value="1"> Allow app to use location information.
-                <input id="submitBtn" type="submit" value="Submit">
-                 </input>
+                <input id="submitBtn" type="submit" value="Submit"></input>
             </form>
 
-            <div class="footer"><a href="index.html">back</a></div>
+            <div class="footer">
+                <a href="index.html">BACK</a>
+            </div>
         </div>
     </body>
     <footer>

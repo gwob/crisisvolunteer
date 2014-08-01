@@ -1,7 +1,20 @@
-h1 
+/*
+Light Grey: #e6e7e8;
+Dark Navy: #182d39; 
+*/
+
+
+h1, h3, p, .footer > a 
 {
-    color: white;
-    
+    text-decoration: none;
+    color: #e6e7e8;
+    font-family: monospace;
+}
+
+h2 > a
+{
+    color: #5fc9e5;
+    text-decoration: none;
 }
 
 #refreshBtn
@@ -16,7 +29,7 @@ h1
 #badgesTitle
 {
     display: inline;
-    margin: 50px 0px 0px 35px;
+    margin: 30px 0px 0px 35px;
 }
 
 #badgeContainer
@@ -25,13 +38,12 @@ h1
     height: 200px;
 }
 
-#badgeBanner
+#banner
 {
     height: 75px;
     width: inherit;
     background-color: #182d39;
-    
-    
+    margin: 0px;
 }
 
 #container
@@ -39,21 +51,35 @@ h1
     margin: 10% 25% 15% 40%;
     height: 480px;
     width: 320px;
-    border: 1px black solid;  
-
+    border: 1px black solid;
+    background-color: #e6e7e8;
+    position: fixed;
 }
 
 body
 {
     background-color: #414149;
-    
 }
 
-.footer
+div > .footer
 {
     text-decoration: none;
-    text-decoration-color: white;
-    position: absolute;
-    top: 600px;
+    text-decoration-color: #e6e7e8;
+    position:absolute;
+    bottom: 0px;
+    width: inherit;
+    height: 50px;
+    background-color: #182d39;
+    margin: 0px 0px;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+html
+{
+    padding: 0px;
     
 }
