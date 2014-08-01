@@ -1,6 +1,7 @@
 h1 
 {
-    color: blue;
+    color: white;
+    
 }
 
 #refreshBtn
@@ -8,15 +9,51 @@ h1
     display: inline;
     height: 20px; 
     width: 35px;
+    margin: 20px 20px 20px -20px;
+    float: right;
 }
 
 #badgesTitle
 {
     display: inline;
+    margin: 50px 0px 0px 35px;
 }
 
 #badgeContainer
 {
-    max-width: inherit;
-    max-height: inherit;
+    width: 140px;
+    height: 200px;
+}
+
+#badgeBanner
+{
+    height: 75px;
+    width: inherit;
+    background-color: #182d39;
+    
+    
+}
+
+#container
+{
+    margin: 10% 25% 15% 40%;
+    height: 480px;
+    width: 320px;
+    border: 1px black solid;  
+
+}
+
+body
+{
+    background-color: #414149;
+    
+}
+
+.footer
+{
+    text-decoration: none;
+    text-decoration-color: white;
+    position: absolute;
+    top: 600px;
+    
 }
