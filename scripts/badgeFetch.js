@@ -44,7 +44,7 @@ $(function(){
             success: function(data){
                 var jdata = jQuery.parseJSON(data);
                 //localStorage.setItem('badgeInfo', JSON.stringify(data));
-                var image = jdata.badges[3].assertion.badge.image;
+                var image = jdata.badges[0].assertion.badge.image;
                 console.log(image);
                 $("#badgeContainer").html( "<img src='" + image + "'>" + "</img>");
                 
