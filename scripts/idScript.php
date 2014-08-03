@@ -26,7 +26,7 @@
 		$returned_groups = curl_exec($curl);
 		curl_close($curl);
 	
-		$badge_groups = json_decode($returned_groups)->groups;
+		$badge_groups = json_decode($returned_groups)->groups; 
         foreach ($badge_groups as $group) 
         {
 			$badges_info[] = $group->groupId;
