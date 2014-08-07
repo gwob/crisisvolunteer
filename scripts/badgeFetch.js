@@ -5,10 +5,11 @@ $(function(){
        
        $('div.msgDiv').html("<p class='saveAnnounce'> Data saved! Please press 'Refresh' on the Badges page to view your badges. </p>");
        if(e){
-           localStorage.setItem('username', $('#username').val())
-           localStorage.setItem('firstname', $('#firstname').val())
-           localStorage.setItem('lastname', $('#lastname').val())
-           localStorage.setItem('mail', $('#mail').val())
+           localStorage.setItem('username', $('#username').val());
+           localStorage.setItem('firstname', $('#firstname').val());
+           localStorage.setItem('lastname', $('#lastname').val());
+           localStorage.setItem('mail', $('#mail').val());
+           localStorage.setItem('skills', $('#skills').val());
        }
        
        var mail = $('#mail').val();
@@ -66,6 +67,7 @@ $(document).ready(function(){
     $('#firstname').val(localStorage.getItem('firstname'));
     $('#lastname').val(localStorage.getItem('lastname'));
     $('#mail').val(localStorage.getItem('mail'));
+    $('#skills').val(localStorage.getItem('skills'));
 
 
 });
