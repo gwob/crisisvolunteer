@@ -2,8 +2,16 @@
 $(function(){
    $("#submitBtn").click(function(e){
        e.preventDefault();
+       
+       $('div.msgDiv').html("<p class='saveAnnounce'> Data saved! Please press 'Refresh' on the Badges page to view your badges. </p>");
+       if(e){
+           localStorage.setItem('username', $('#username').val())
+           localStorage.setItem('firstname', $('#firstname').val())
+           localStorage.setItem('lastname', $('#lastname').val())
+           localStorage.setItem('mail', $('#mail').val())
+       }
+       
        var mail = $('#mail').val();
-      
       $.ajax({
         type: 'POST',
         contentType: 'application/x-www-form-urlencoded',
@@ -54,8 +62,10 @@ $(function(){
 });
 
 $(document).ready(function(){
-    
-
+    $('#username').val(localStorage.getItem('username'));
+    $('#firstname').val(localStorage.getItem('firstname'));
+    $('#lastname').val(localStorage.getItem('lastname'));
+    $('#mail').val(localStorage.getItem('mail'));
 
 
 });

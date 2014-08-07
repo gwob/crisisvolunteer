@@ -201,3 +201,15 @@ form
     
 }
 
+div.msgDiv
+{
+    height: 30px;
+    width: 300px;
+    margin: 0px auto;
+}
+
+.saveAnnounce
+{
+    color: black;
+    
+}
